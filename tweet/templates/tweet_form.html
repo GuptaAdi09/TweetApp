@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+ chai or tweet
+
+{% endblock title %} 
+
+{% block content %}
+<h1 class='text-center mt-5'> Welcome to chai django projects</h1>
+<h3> {% if form.instaance.pk %} Edit Tweet {% else %} create tweet {% endif %}
+    <form method='POST' enctype='multipart/form-data' class='form'>
+        {% csrf_token %}
+        {{form.as_p }}
+        <button class='btn btn-warning' type="submit">Sbmit</button>
+
+
+    </form>
+    <a href="{% url 'tweet_list' %}">Back to tweet List</a>
+</h3>
+{% endblock content %}
+

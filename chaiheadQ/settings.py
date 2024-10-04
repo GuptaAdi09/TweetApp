@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tweet',
+    
 ]
+RECAPTCHA_PUBLIC_KEY = '6LdKjQkqAAAAAEOw5My818wsuqdIxnFqAiFMLSuU'
+RECAPTCHA_PRIVATE_KEY = '6LdKjQkqAAAAABxgWXx24iZuIArqf47ycC4CLfiw'
+RECAPTCHA_USE_SSL = True
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

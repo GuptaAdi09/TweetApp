@@ -23,32 +23,32 @@ def Register(request):
             user = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
             print(email)
-            S_email = "17aditaya@gmail.com"
-            email_paa = "zmpu vrne ebcl yolb"
+            # S_email = "17aditaya@gmail.com"
+            # email_paa = "zmpu vrne ebcl yolb"
 
-            receiver_email = email
+            # receiver_email = email
         
 
-            subject = "Welcome to Django  Based registration page "
-            message = (
-                     f"Hello {user},\n"
-                "Welcome to our website. Thank you so much for registering with us."
-            )
+            # subject = "Welcome to Django  Based registration page "
+            # message = (
+            #          f"Hello {user},\n"
+            #     "Welcome to our website. Thank you so much for registering with us."
+            # )
 
-            em = EmailMessage()
-            em["From"] =  S_email
-            em["To"] = receiver_email
-            em["Subject"] = subject
-            em.set_content(message)
+            # em = EmailMessage()
+            # em["From"] =  S_email
+            # em["To"] = receiver_email
+            # em["Subject"] = subject
+            # em.set_content(message)
            
 
-            context = ssl.create_default_context()
-            with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
-                smtp.login(S_email, email_paa)
-                smtp.sendmail(S_email, receiver_email, em.as_string())
+            # context = ssl.create_default_context()
+            # with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as smtp:
+            #     smtp.login(S_email, email_paa)
+            #     smtp.sendmail(S_email, receiver_email, em.as_string())
 
-            print("Email sent successfully")
-            messages.success(request,'Account is succsesfully created for' + ' '+ user)
+            # print("Email sent successfully")
+            # messages.success(request,'Account is succsesfully created for' + ' '+ user)
             return redirect('login')
             
 
